@@ -12,7 +12,13 @@ Install dependencies:
 
 ### Preview
 
-    $ npm run dev
+Runs dev server listening on localhost:8080 by default:
+
+    $ npm run start
+
+### Build
+
+    $ npm run build
 
 ### Export
 
