@@ -1,5 +1,5 @@
 {
-  "name": "gpolek.com",
+  "name": "cv.gpolek.com",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -8,7 +8,8 @@
     "build": "node build/build.js",
     "export": "concurrently \"npm run start\" \"npm run generate\" --success first --kill-others --raw",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
-    "deploy": "aws s3 sync ./dist s3://gpolek.com --acl public-read --delete"
+    "deploy": "aws s3 sync ./dist s3://cv.gpolek.com --acl public-read --delete",
+    "download": "aws s3 sync s3://cv.gpolek.com/static ./static --acl public-read"
   },
   "dependencies": {
     "font-awesome": "^4.7.0",
@@ -18,6 +19,7 @@
     "npm-font-open-sans-condensed": "^1.0.3",
     "raleway-webfont": "^3.0.1",
     "roboto-fontface": "^0.7.0",
+    "serve": "^11.3.2",
     "source-sans-pro": "^2.0.10",
     "vue": "^2.4.2",
     "vue-i18n": "^7.2.0",
