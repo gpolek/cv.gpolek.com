@@ -1,4 +1,4 @@
-# `cv.gpolek.com` [![Build Status](https://travis-ci.org/gpolek/gpolek.com.svg?branch=master)](https://travis-ci.org/gpolek/gpolek.com)
+# cv.gpolek.com [![Build Status](https://travis-ci.org/gpolek/gpolek.com.svg?branch=master)](https://travis-ci.org/gpolek/gpolek.com)
 
 Online curriculum vitae and ready for print files in .pdf format for gpolek.com purposes.
 
