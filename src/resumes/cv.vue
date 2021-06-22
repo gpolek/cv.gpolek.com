@@ -9,7 +9,7 @@
           <h2>{{person.position}}</h2>
           <div class="intro">
             <div class="photo">
-              <img src="../assets/polek.jpg" />
+              <img src="../assets/polek.png" />
             </div>
             <quote v-html="person.description"></quote>
             <div class="contact">
@@ -51,16 +51,24 @@
           </div>
 
           <div class="section resume">
-            <h3 class="cv"><span>Curriculum Vitae</span></h3>
+            <h3 class="cv"><span>Experience & Education</span></h3>
             <div class="section">
               <table>
                 <tr>
-                  <td class="aside">
+                  <td class="header">
                     <aside>
                       <h4>Work Experience</h4>
-                      <img src="../assets/icons/basic_case.svg" />
+                      <i class="icon icon-briefcase"></i>
                     </aside>
                   </td>
+                  <td class="header">
+                    <aside>
+                      <h4>Education</h4>
+                      <i class="icon icon-book-open"></i>
+                    </aside>
+                  </td>
+                </tr>
+                <tr>
                   <td>
                     <section>
                       <div class="experience-block" v-for="experience in person.experience">
@@ -76,22 +84,8 @@
                         </div>
                       </div>
                     </section>
-                    <p class="freelance">+ over 10 years of freelance web development experience</p>
                   </td>
-                </tr>
-              </table>
-            </div>
-
-            <div class="section">
-              <table>
-                <tr>
-                  <td class="aside">
-                    <aside>
-                      <h4>Education</h4>
-                      <img src="../assets/icons/basic_book_pencil.svg" />
-                    </aside>
-                  </td>
-                  <td>
+                  <td class="header">
                     <section>
                       <div class="education-block" v-for="education in person.education">
                         <div class="row">
@@ -105,22 +99,41 @@
                         </div>
                       </div>
                     </section>
+                    <aside class="certificates">
+                      <h4>Certificates</h4>
+                      <i class="icon icon-trophy"></i>
+                    </aside>
+                    <section>
+                      <div class="education-block" v-for="certificate in person.certificates">
+                        <div class="row">
+                          <span class="certificate-certificate">{{certificate.certificate}}</span>
+                          <p class="certificate-details">
+                            <span class="certificate-issuer">{{certificate.issuer}}</span> / <span class="education-time-period">{{certificate.timeperiod}}</span>
+                          </p>
+                        </div>
+                        <div class="row" v-if="certificate.description">
+                          <p class="certificate-description">{{certificate.description}}</p>
+                        </div>
+                      </div>
+                    </section>
                   </td>
                 </tr>
               </table>
             </div>
           </div>
+          
 
-          <div class="section">
+          <div class="section skills-abilities">
             <h3><span>Skills &amp; Abilities</span></h3>
             <div class="section expertise-section">
-              <div class="expertise-block" v-for="exp in person.expertise">
+              <div :class="'row exp-' + exp.side + ''" v-for="exp in person.expertise">
                 <div class="row">
                   <span class="expertise-level" :style="'width: ' + exp.level + '%'">{{ exp.level }}%</span>
                   <h4 class="expertise-name">{{ exp.name }}</h4>
                   <div class="expertise-level-bar" :style="'width: ' + exp.level + '%'"></div>
                 </div>
               </div>
+              <div class="clear"></div>
             </div>
             <div class="section skills">
               <table>
@@ -128,7 +141,7 @@
                   <td class="aside">
                     <aside>
                       <h4>Skills</h4>
-                      <img src="../assets/icons/basic_gear.svg" />
+                      <i class="icon icon-gears"></i>
                     </aside>
                   </td>
                   <td>
@@ -136,7 +149,6 @@
                       <div class="skills-group-block" v-for="skills in person.skills">
                         <div class="row">
                           <h4 class="skills-name">{{ skills.name }}</h4>
-                          <h5 class="skills-description">{{ skills.description }}</h5>
                           <p class="skills">
                             <span class="skills-block" v-for="skill in skills.skills">
                               {{ skill.name }}
@@ -156,7 +168,7 @@
                   <td class="aside">
                     <aside>
                       <h4>Languages</h4>
-                      <img src="../assets/icons/basic_signs.svg" />
+                      <i class="icon icon-streetsign"></i>
                     </aside>
                   </td>
                   <td>
@@ -181,7 +193,7 @@
                 <td class="aside">
                   <aside>
                     <h4>Hobby</h4>
-                    <img src="../assets/icons/basic_joypad.svg" />
+                    <i class="icon icon-bike"></i>
                   </aside>
                 </td>
                 <td>
@@ -203,7 +215,7 @@
   </div>
 </div>
 
-<div class="page-wrapper">
+<div class="page-wrapper page-wrapper-n">
   <div class="page">
     <div class="page-inner">
 
@@ -238,18 +250,6 @@ export default Vue.component('cv', {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
 
-@media screen {
-    #resume {
-        padding: 40px;
-    }
-}
-
-@media print {
-    #resume {
-        padding: 20px 0;
-    }
-}
-
 #resume {
   box-sizing: border-box;
 
@@ -281,6 +281,7 @@ export default Vue.component('cv', {
     opacity: 0.8;
     text-align: center;
     line-height: 120%;
+    page-break-after: always;
   }
 
   .contact {
@@ -297,6 +298,11 @@ export default Vue.component('cv', {
     li {
       list-style: none;
     }
+  }
+
+  aside i.icon {
+    font-size: 42px;
+    padding-bottom: 5px;
   }
 
   mark {
@@ -376,6 +382,17 @@ export default Vue.component('cv', {
     }
   }
 
+  .exp-left {
+    float: left;
+    width: 48%;
+    position: relative;
+  }
+  .exp-right {
+    float: right;
+    width: 48%;
+    position: relative;
+  }
+
   .photo {
     width: 200px;
     height: 200px;
@@ -397,8 +414,13 @@ export default Vue.component('cv', {
     width: 100%;
   }
 
-  .section.skills {
+  .section.skills-abilities,
+  .page-wrapper-n {
      page-break-before: always;
+  }
+
+  .certificates {
+    padding-top: 30px;
   }
 
   .section.languages,
@@ -407,7 +429,8 @@ export default Vue.component('cv', {
   }
 
   .job-title,
-  .education-degree {
+  .education-degree,
+  .certificate-certificate {
     padding: 0;
     margin: 0;
     text-transform: uppercase;
@@ -416,7 +439,8 @@ export default Vue.component('cv', {
     color: #000;
   }
   .job-details,
-  .education-details {
+  .education-details,
+  .certificate-details  {
     font-size: 12px;
     padding: 0;
     margin: 0;
@@ -424,7 +448,8 @@ export default Vue.component('cv', {
     margin-bottom: 10px;
   }
   .job-description,
-  .education-description {
+  .education-description,
+  .certificate-description  {
     padding: 0;
     margin: 0;
     line-height: 110%;
@@ -437,11 +462,15 @@ export default Vue.component('cv', {
     color: #999;
   }
 
+  .clear {
+    clear: both;
+  }
+
   .expertise-section {
-    margin-bottom: 35px;
+    padding-bottom: 35px;
   }
   .expertise-block {
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
     position: relative;
   }
@@ -477,11 +506,12 @@ export default Vue.component('cv', {
     margin-bottom: 10px;
   }
   p.skills {
-    text-align: center;
+    text-align: left;
     font-size: 13px;
+    margin: 7px;
     span {
       display: inline-block;
-      margin: 0 7px;
+      margin-right: 10px;
     }
   }
 
@@ -521,6 +551,14 @@ export default Vue.component('cv', {
     width: 100px;
   }
 
+  td.header {
+    width: 50%;
+  }
+
+  td.header aside {
+    width: 100%;
+  }
+
   .hobby {
     text-transform: uppercase;
     font-weight: 200;
@@ -528,5 +566,23 @@ export default Vue.component('cv', {
     display: inline-block;
     margin: 0 7px;
   }
+}
+
+@media screen {
+    #resume {
+        padding: 40px;
+    }
+}
+
+@media print {
+    #resume {
+        padding: 20px 0;
+    }
+    body {
+      background: #fff !important;
+    }
+    .page-wrapper {
+      background: #fff !important;
+    }
 }
 </style>

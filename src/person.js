@@ -5,12 +5,37 @@ export const PERSON = {
     last: 'Polek',
   },
   photo: 'resume/assets/polek.jpg',
-  description: '<strong>An ambitious problem solver with a passion for online businesses and who would like to join a team of like-minded developers.</strong> I aspire to work with a collaborative team of talented individuals. I am looking for a suitable position with a company where outstanding performance is recognized and where I can work on a variety of high profile projects.',
-  position: 'DevOps, Developer, Engineer',
-  experience: [{
+  description: '<strong>I am a software architect focused on cloud-native technologies, distributed systems and migration to the cloud</strong>. I helped to architect and deploy complex systems based on Kubernetes and other container technologies. I am experienced with cloud, cloud-native technologies and distributed systems architecture. I like to work in multidisciplinary teams following DevOps and Agile principles.',
+  position: 'Architect, Cloud-native, Engineer',
+  experience: [
+    {
+      company: 'G2A.com',
+      position: 'Lead Platform Architect',
+      timeperiod: 'March 2021 - Present',
+      description: ''
+    },
+    {
+      company: 'G2A.com',
+      position: 'Product Owner',
+      timeperiod: 'January 2020 - February 2021',
+      description: ''
+    },
+    {
+      company: 'G2A.com',
+      position: 'Software Architect',
+      timeperiod: 'October 2018 - February 2021',
+      description: ''
+    },
+    {
+      company: 'G2A.com',
+      position: 'IT Supervisor',
+      timeperiod: 'September 2017 - July 2018',
+      description: ''
+    },
+    {
       company: 'G2A.com',
       position: 'Senior DevOps Engineer',
-      timeperiod: 'May 2017 - Present',
+      timeperiod: 'May 2017 - October 2018',
       description: ''
     },
     {
@@ -18,18 +43,6 @@ export const PERSON = {
       position: 'DevOps Engineer',
       timeperiod: 'February 2017 - May 2017',
       description: `
-      - Participate in project teams in developing/building IT solutions to meet business requirements.<br />
-      - Coordinates development activities with other groups.<br />
-      - Lead and guides the design, development of reusable components.<br />
-      - Perform script maintenance and update due to changes in requirements or implementations.<br />
-      - Build automated deployments using configuration management technology.<br />
-      - Contribute to and review deployment plans; schedules the installation of new modules, upgrades and fixes to the production environment.<br />
-      - Work with Release Management to ensure modules are production ready.<br />
-      - Create release notes, deployment plans, etc.<br />
-      - Verify the functionality of components and services and ensure deployment meets client's expectations.<br />
-      - Plan ongoing routine application maintenance tasks.<br />
-      - Establish requirements, methods and procedures for routine maintenance.<br />
-      - Oversee and assist in production support.
       `
     },
     {
@@ -37,20 +50,6 @@ export const PERSON = {
       position: 'DevOps Engineer',
       timeperiod: 'October 2015 - February 2017',
       description: `
-      - Continuous Delivery, automated rollback and failover in Ansible.<br />
-      - Continuous Integration. Writing build/test/deploy pipelines.<br />
-      - Continuous Performance Management. Measuring performance and working with developers to
-      improve it (Gatling, Scala, JVM).<br />
-      - Administration of databases (PostgreSQL, MySQL, Couchbase, Cassandra) and messaging
-      systems (Kafka, RabbitMQ)<br />
-      - Administration of web servers (Nginx, HAProxy). Load balancing.<br />
-      - Administration of big data clusters (Spark, Hadoop, HBase)<br />
-      - Network and Linux virtual machines administration to some extent.<br />
-      - Autoscaling (Google Cloud, Amazon).<br />
-      - Containerisation / packaging. Distributed component integration/troubleshooting (Docker).<br />
-      - Log aggregation (Kibana / Logstash)<br />
-      - Availability Monitoring (Zabbix, Consul)<br />
-      - Metrics and Statistics (StatsD, Riemann, Graphite, InfluxDB)
       `
     },
     {
@@ -58,10 +57,6 @@ export const PERSON = {
       position: 'Technical Support Engineer',
       timeperiod: 'March 2015 - October 2015',
       description: `
-      I was responsible for all Grand Parade's products and services, performance optimization,
-      bug fixes and troubleshooting, maintaining legacy code and developing continuous integration
-      solutions. Working on daily basis with real time systems that manage payments, transactions,
-      live trade and betting.
       `
     },
     {
@@ -69,9 +64,6 @@ export const PERSON = {
       position: 'Mobile Web Developer',
       timeperiod: 'July 2014 - February 2015',
       description: `
-      I was responsible for developing sport betting systems and content mangement solutions for
-      betting industry. Working on frontend and backend solutions to ensure high accessibility
-      over all platforms.
       `
     },
     {
@@ -79,56 +71,89 @@ export const PERSON = {
       position: 'Web Developer',
       timeperiod: 'April 2012 - June 2014',
       description: `
-      I was responsible for working on a range of projects, designing appealing websites and
-      interacting on a daily basis with graphic designers and developers. My work was mainly
-      focused on building custom solutions and systems used internally by Hamilton May
       `
     }
   ],
-  education: [{
+  education: [
+    {
       degree: 'Master of Science',
       field: 'Computer Science in Industry',
       university: 'AGH University of Science and Technology',
       timeperiod: '2014 - 2016',
-      description: `
-      While studying 'Computer Science in Industry', I have gained knowledge from areas like computer graphics, computer-mediated communication, conceptual graphs, database systems, decision support systems, general purpose multiprocessor, microprocessor applications, operating system design, software engineering and user interface management systems.
-      `
+      description: ``
     },
     {
       degree: 'Bachelor of Science',
       field: 'Applied Computer Science',
       university: 'AGH University of Science and Technology',
       timeperiod: '2010 - 2014',
-      description: `
-      While studying Applied Computer Science, I have learned how to use the newest programming techniques and how to adapt existing software to particular industrial conditions. I am skilled in using numerical modelling and artificial intelligence software, expert systems, graphics and multimedia techniques and technical device maintenance systems.
-      `
+      description: ``
     }
   ],
-  expertise: [{
+  certificates: [
+    {
+      certificate: 'Management 3.0',
+      issuer: 'Management 3.0',
+      timeperiod: '2021',
+    },
+    {
+      certificate: 'Professional Product Owner II',
+      issuer: 'Scrum.org',
+      timeperiod: '2020',
+    },
+    {
+      certificate: 'AWS SOLUTIONS ARCHITECT - ASSOCIATE',
+      issuer: 'Amazon AWS',
+      timeperiod: '2019 - 2021',
+    },
+    {
+      certificate: 'MICROSOFT AZURE SOLUTIONS ARCHITECT EXPERT',
+      issuer: 'Microsoft',
+      timeperiod: '2019 - 2021',
+    },
+    {
+      certificate: 'MICROSOFT CERTIFIED PROFESSIONAL',
+      issuer: 'Microsoft',
+      timeperiod: '2018 - 2020',
+    },
+  ],
+  expertise: [
+    {
+      name: 'Product',
+      level: '80',
+      side: 'left',
+    },
+    {
+      name: 'Cloud',
+      level: '90',
+      side: 'right',
+    },
+    {
       name: 'Development',
-      level: '90'
+      level: '80',
+      side: 'right',
     },
     {
-      name: 'Operations',
-      level: '95'
-    },
-    {
-      name: 'WebDesign',
-      level: '60'
-    },
-    {
-      name: 'Support',
-      level: '70'
+      name: 'Leadership',
+      level: '60',
+      side: 'left',
     },
     {
       name: 'Troubleshooting',
-      level: '100'
-    }
+      level: '100',
+      side: 'left',
+    },
+    
+    
+    {
+      name: 'Operations',
+      level: '70',
+      side: 'right',
+    },
   ],
   skills: [
     {
-      name: "Programming Languages",
-      description: "I can code in ...",
+      name: "Development",
       skills: [
         {
           name: 'Go'
@@ -140,148 +165,95 @@ export const PERSON = {
           name: 'JavaScript'
         },
         {
-          name: 'Bash'
+          name: 'Typescript'
+        },
+        {
+          name: 'Kotlin'
         },
         {
           name: 'Groovy'
         },
-        {
-          name: 'Ruby'
-        },
-        {
-          name: 'Lua'
-        },
-        {
-          name: 'PHP'
-        }
       ]
     },
     {
-      name: "Practicies",
-      decription: "I do...",
+      name: "Cloud & DevOps",
       skills: [
         {
-          name: "Software Deployment"
+          name: "Azure"
         },
         {
-          name: "Continuous Integration"
+          name: "AWS"
         },
         {
-          name: "Continuous Delivery"
-        },
-        {
-          name: "Service Discovery"
-        },
-        {
-          name: "Configuration as Code"
-        },
-        {
-          name: "Infrastructure as Code"
-        },
-        {
-          name: "Release Management"
-        },
-        {
-          name: "Automated Testing"
-        }
-      ]
-    },
-    {
-      name: "Cloud",
-      description: "I'm cloud-native...",
-      skills: [
-        {
-          name: "Amazon Web Services"
-        },
-        {
-          name: "Microsoft Azure"
-        },
-        {
-          name: "Google Cloud Platform"
-        },
-        {
-          name: "Pivotal"
-        },
-        {
-          name: "Heroku"
-        },
-        {
-          name: "DigitalOcean"
-        }
-      ]
-    },
-    {
-      name: "Technologies",
-      description: "I know...",
-      skills: [
-
-        {
-          name: "Ansible"
-        },
-        {
-          name: "Puppet"
-        },
-        {
-          name: "Docker"
-        },
-        {
-          name: "DC/OS"
-        },
-        {
-          name: "Marathon/Mesos"
+          name: "GCP"
         },
         {
           name: "Kubernetes"
         },
         {
-          name: "Couchbase"
-        },
-        {
-          name: "Redis"
-        },
-        {
-          name: "Cassandra"
-        },
-        {
-          name: "MySQL"
-        },
-        {
-          name: "PostgreSQL"
-        },
-        {
-          name: "Kafka"
-        },
-        {
-          name: "RabbitMQ"
-        },
-        {
-          name: "HAProxy"
-        },
-        {
-          name: "nginx"
-        },
-        {
-          name: "Consul"
-        },
-        {
-          name: "Vault"
+          name: "Docker"
         },
         {
           name: "Terraform"
         },
         {
+          name: "Ansible"
+        },
+        {
           name: "Jenkins"
         },
-        {
-          name: "TeamCity"
-        },
-        {
-          name: "Bamboo"
-        }
       ]
     },
+    {
+      name: "Data",
+      skills: [
+        {
+          name: "Apache Kafka"
+        },
+        {
+          name: "Apache Spark"
+        },
+        {
+          name: "Apache Flink"
+        },
+        {
+          name: "Cassandra"
+        },
+        {
+          name: "Couchbase"
+        },
+      ]
+    },
+    {
+      name: "Industry Knowledge",
+      skills: [
+        {
+          name: "Software Architecture"
+        },
+        {
+          name: "Distributed Systems"
+        },
+        {
+          name: "Domain-Driven Design (DDD)"
+        },
+        {
+          name: "CI/CD"
+        },
+      ]
+    },
+    {
+      name: "Interpersonal Skills",
+      skills: [
+        {
+          name: "Thought Leadership"
+        },
+        {
+          name: "Agile Leadership"
+        },
+      ]
+    }
   ],
-  skillDescription: 'Also proficient in Adobe Photoshop and Illustrator, grew up bilingual (English and Klingon).',
+  skillDescription: '',
   languages: [
     {
       name: "Polish",
@@ -293,33 +265,24 @@ export const PERSON = {
       level: '80',
       levelName: "Professional Proficiency"
     },
-    {
-      name: "Spanish / German",
-      level: '10',
-      levelName: "Elementary Proficiency"
-    }
   ],
   hobbies: [
+    {
+      name: 'Cycling'
+    },
     {
       name: 'Coding'
     },
     {
-      name: 'Console Gaming'
+      name: 'Gaming'
     },
-    {
-      name: 'Crossfit'
-    },
-    {
-      name: 'Longboarding'
-    }
   ],
   contact: {
     email: 'hello@gpolek.com',
     phone: '+48 607 206 506',
-    skype: 'grzegorzpolek',
     city: 'Cracow, Poland',
     website: 'grzegorzpolek.com',
-    blog: 'gpolek.io',
+    blog: '',
     facebook: 'grzegorz.polek',
     linkedin: 'grzegorzpolek',
     twitter: 'grzegorzpolek',

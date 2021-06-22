@@ -19,10 +19,11 @@ export default {
 @import '../node_modules/npm-font-open-sans/open-sans.css';
 @import '../node_modules/npm-font-open-sans-condensed/open-sans-condensed.css';
 @import '../node_modules/raleway-webfont/raleway.css';
+@import './assets/css/etlinefont.css';
 body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
-  background: #CCCCCC;
+  background: #fff;
 }
 </style>
