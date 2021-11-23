@@ -301,7 +301,7 @@ export default Vue.component('cv', {
   }
 
   aside i.icon {
-    font-size: 42px;
+    font-size: 32px;
     padding-bottom: 5px;
   }
 
