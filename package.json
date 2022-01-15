@@ -93,7 +93,7 @@
     "rxjs": "^5.4.3",
     "selenium-server": "^3.5.3",
     "semver": "^5.4.1",
-    "shelljs": "^0.7.6",
+    "shelljs": "^0.8.5",
     "sinon": "^2.3.4",
     "sinon-chai": "^2.13.0",
     "url-exists": "^1.0.3",
